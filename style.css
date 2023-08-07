@@ -1,0 +1,130 @@
+body {
+  background-color: #f5f5f5; 
+  color: #333; 
+}
+body.dark-mode {
+  background-color: #333; 
+  color: #f5f5f5; 
+}
+.imagen-nav{background-image: url(./fotos/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+  .colorNav{color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2px black;
+  padding: 2%;
+}
+  .boton-centro{width: 100%;
+    height: 100%;
+}
+.foto-card1{background-image: url(./fotos/39229f01-33cb-49b5-b491-c49692be7412.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 250px;
+}
+.foto-card2{background-image: url(./fotos/dee2e630-dc78-442c-9e8a-712e19390ff3.jpeg);
+  background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+min-height: 250px;
+}
+
+.rating {
+    display: inline-block;
+}
+.rating input {
+    display: none;
+}
+.rating label {
+  font-size: 300%;
+  float: right;
+  color: #ccc;
+}
+.rating label:before {
+  content: '\2605'; 
+}
+.rating input:checked ~ label {
+  color: #ffbf00; 
+}
+.borde-boton {
+    width: 80px;
+    height: 41px;
+    border: 2px solid black;
+    border-radius: 20px;
+    
+}
+.boton-modos {
+  width: 50%;
+  height: 95%;
+  margin: 1.5px;
+  border-radius: 20px;
+  background-image: url(./fotos/png-clipart-sunlight-drawing-sun-orange-symbol-removebg-preview.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-modos.active {
+  background-image: url(./fotos/png-transparent-moon-illustration-full-moon-moon-atmosphere-monochrome-sphere.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translateX(90%);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.opinion-form {
+  margin-bottom: 20px;
+}
+
+.opinion-form input,
+.opinion-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.opinion-form button {
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.opinion-form button:hover {
+  background-color: #0d47a1;
+}
+
+.opinion-list {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.opinion {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+} */
+
+
