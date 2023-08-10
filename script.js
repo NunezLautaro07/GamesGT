@@ -1,22 +1,3 @@
-const stars = document.querySelectorAll('input[name="rating"]');
-
-stars.forEach(star => star.addEventListener('change', handleRating));
-
-function handleRating(event) {
-  const rating = event.target.value;
-  // Aquí puedes hacer lo que desees con la puntuación seleccionada, como enviarla al servidor o mostrarla en pantalla.
-  console.log(`Puntuación seleccionada: ${rating} estrellas`);
-}
-const stars2 = document.querySelectorAll('input[name="rating-2"]');
-
-stars2.forEach(star2 => star2.addEventListener('change', handleRating));
-
-function handleRating(event) {
-  const rating2 = event.target.value;
-  // Aquí puedes hacer lo que desees con la puntuación seleccionada, como enviarla al servidor o mostrarla en pantalla.
-  console.log(`Puntuación seleccionada: ${rating2} estrellas`);
-}
-
 const sliderBtn = document.getElementById('sliderBtn');
 const body = document.body
 const card = document.getElementsByClassName('card')
