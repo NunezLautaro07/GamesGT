@@ -19,9 +19,11 @@ function handleRating(event) {
 
 const sliderBtn = document.getElementById('sliderBtn');
 const body = document.body
+const card = document.getElementsByClassName('card')
 sliderBtn.addEventListener('click', () => {
   sliderBtn.classList.toggle('active');
   body.classList.toggle('dark-mode');
+  card.classList.toggle('dark-mode');
 });
 
 
