@@ -1,12 +1,10 @@
 const sliderBtn = document.getElementById('sliderBtn');
 const container = document.querySelector(".container-fluid");
-const dark = document.querySelector(".card")
-const darkk = document.querySelector(".card")
+const card = document.querySelector(".card")
 sliderBtn.addEventListener('click', () => {
   sliderBtn.classList.toggle('active');
   container.classList.toggle('darkk-mode');
-  dark.classList.toggle('dark-mode');
-  
+  card.classList.toggle('dark-mode');
 });
 
 
