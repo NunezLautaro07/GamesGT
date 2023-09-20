@@ -1,17 +1,20 @@
 const sliderBtn = document.getElementById('sliderBtn');
 const container = document.querySelector(".container-fluid");
 const cards = document.getElementsByClassName("card"); 
+const iconos = document.getElementsByClassName("fa-brands")
+const colorBlanco = document.querySelector(".colorBlanco")
 
 sliderBtn.addEventListener('click', () => {
   sliderBtn.classList.toggle('active');
   container.classList.toggle('darkk-mode');
-
+  colorBlanco.classList.toggle("text-white")
   for (const card of cards) {
     card.classList.toggle('dark-mode');
   }
+  for (const icono of iconos) {
+    icono.classList.toggle("text-white")
+  }
 });
-
-
 
 
 

@@ -30,17 +30,17 @@
     height: 100%;
     padding-top: 90px;
 }
-.foto-card1{background-image: url(./fotos/39229f01-33cb-49b5-b491-c49692be7412.jpeg);
+.foto-card{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   min-height: 250px;
 }
+.foto-card1{background-image: url(./fotos/39229f01-33cb-49b5-b491-c49692be7412.jpeg);
+}
 .foto-card2{background-image: url(./fotos/dee2e630-dc78-442c-9e8a-712e19390ff3.jpeg);
-  background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-min-height: 250px;
+}
+.foto-card3{background-image: url(./fotos/WhatsApp\ Image\ 2023-09-19\ at\ 11.44.22\ PM.jpeg);
 }
 
 .rating {
