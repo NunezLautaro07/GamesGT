@@ -256,7 +256,7 @@ if (document.location.search.match(/type=embed/gi)) {
       const H = 1500;
       const N = 70;
 
-      const maxSpeed = 200;
+      let maxSpeed = 200;
       const accel = 38;
       const breaking = -80;
       const decel = -40;

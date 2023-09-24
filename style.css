@@ -42,6 +42,7 @@
 }
 .foto-card3{background-image: url(./fotos/WhatsApp\ Image\ 2023-09-19\ at\ 11.44.22\ PM.jpeg);
 }
+.foto-card4{background-image: url(./fotos/Captura\ de\ pantalla\ 2023-09-24\ 183524.png);}
 
 .rating {
     display: inline-block;
@@ -88,6 +89,7 @@
   transform: translateX(90%);
 }
 .margen-derecha{padding-right: 10px;}
+
 
 
 
