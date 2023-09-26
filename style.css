@@ -89,8 +89,13 @@
   transform: translateX(90%);
 }
 .margen-derecha{padding-right: 10px;}
-
-
+.subirArchivo{width: 250px;
+margin-left: 10%;}
+.bordess{
+  position:absolute;
+width: 7%;
+left: 110px;
+}
 
 
 
