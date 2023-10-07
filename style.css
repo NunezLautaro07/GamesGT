@@ -1,4 +1,4 @@
-webkit-scrollbar { display: none; }
+
  body {
   background-color: #f5f5f5; 
   color: #333; 
@@ -23,16 +23,18 @@ webkit-scrollbar { display: none; }
   background-position: center;
   background-size: cover;
 }
-  .colorNav{color: rgb(255, 255, 255);
-    -webkit-text-stroke: 2px black;
+  .colorNav{
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
   padding: 2%;
 }
   .boton-centro{width: 100%;
     height: 100%;
     padding-top: 90px;
+    
 }
-.flexwrap{flex-wrap:nowrap;}
-.margen-derechaa{padding-right: 110px;}
+
+
 .foto-card{
   background-repeat: no-repeat;
   background-position: center;
@@ -46,7 +48,8 @@ webkit-scrollbar { display: none; }
 .foto-card3{background-image: url(./fotos/WhatsApp\ Image\ 2023-09-19\ at\ 11.44.22\ PM.jpeg);
 }
 .foto-card4{background-image: url(./fotos/Captura\ de\ pantalla\ 2023-09-24\ 183524.png);}
-
+.foto-card5{background-image: url(./fotos/tateti.png);}
+.foto-card88{background-image: url(./fotos/image-removebg-preview.png);}
 .rating {
     display: inline-block;
 }
@@ -73,16 +76,15 @@ webkit-scrollbar { display: none; }
     
 }
 .boton-modos {
-  width: 55%;
+  width: 40%;
   height: 100%;
-  margin-left: -11px;
   border-radius: 20px;
   background-image: url(./fotos/png-clipart-sun-sun.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s 
 }
 
 .boton-modos.active {
@@ -95,11 +97,8 @@ webkit-scrollbar { display: none; }
 .margen-derecha{padding-right: 10px;}
 .subirArchivo{width: 250px;
 margin-left: 10%;}
-.bordess{
-  position:absolute;
-width: 7%;
-left: 110px;
-}
+.transp{border: 0px;
+background-color: rgba(255, 255, 255, 0);}
 
 
 
@@ -111,45 +110,5 @@ left: 110px;
 
 
 
-/* h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.opinion-form {
-  margin-bottom: 20px;
-}
-
-.opinion-form input,
-.opinion-form textarea {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-}
-
-.opinion-form button {
-  background-color: #2196F3;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.opinion-form button:hover {
-  background-color: #0d47a1;
-}
-
-.opinion-list {
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-
-.opinion {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-} */
 
 

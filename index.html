@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,6 @@
 </head>
 <body>
     <div class="container-fluid">
-      <div id="dark">
         <div class="row">
             <nav class="navbar-expand-md  imagen-nav navbar-dark ">
                 <div class="container-fluid text-center">
@@ -22,14 +21,22 @@
               </nav>
               
     </div>
-    <div class="row flexwrap">
-    <div class="borde-boton ">
-      <button id="sliderBtn" class="boton-modos"></button>
-    </div>
-    <form class="d-flex justify-content-end margen-derechaa"  role="search">
-      <input class=" me-2" type="search" placeholder="Buscar" aria-label="Search">
-      <button class="btn btn-outline-dark" type="submit">Buscar</button>
+    <div class="row">
+      <div class="col-md-10 ">
+        <div class="borde-boton ">
+          <button id="sliderBtn" class="boton-modos"></button>
+        </div>
+      </div>
+    <div class="col-md-2 ">
+      <div class="col-10 d-inline">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" id="buscador">
+      <button class="btn btn-outline-success " type="submit">Buscar</button>
     </form>
+      
+      </div>
+    </div>
+    
 </div>
     
     <div class="row mt-3">
@@ -181,15 +188,15 @@
     <div class="col col-12  col-lg-6 ">
         <div class="card mb-3" >
             <div class="row g-0">
-              <div class="col-md-4 g-0 foto-card ">
-                <a href="./juego1/juego1.html" class="btn boton-centro bordes  fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>
+              <div class="col-md-4 g-0 foto-card foto-card5">
+                <a href="./juego 5/index.html" class="btn boton-centro bordes  fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>
                 
               </div>
 
               <div class="col-md-8">
                 <div class="card-body text-center">
-                  <h5 class="card-title text-center fs-4">Titulo del juego</h5>
-                  <p class="card-text fs-5">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer
+                  <h5 class="card-title text-center fs-4">Ta-Te-Ti</h5>
+                  <p class="card-text fs-5">Un emocionante duelo mental en un tablero 3x3. ¿Serás el estratega que marque tres en raya primero? ¡Desafía a tus amigos y demuestra tu destreza en este juego clásico de decisiones rápidas!
                     <form action="https://formspree.io/f/xqkoorgv" method="post">
                       <div class="rating">
                     <input type="radio" name="rating-5" id="star1-5" value="1" />
@@ -218,9 +225,9 @@
         
       <div class="card mb-3" >
         <div class="row g-0">
-          <div class="col-md-4 g-0 foto-card">
-              <img class="subirArchivo" src="./fotos/image-removebg-preview.png" alt="Imagen de carga de archivo">
-            <label for="archivoo" class="btn boton-centro bordess  fs-1 ">
+          <div class="col-md-4 g-0 foto-card foto-card88">
+            
+            <label for="archivoo" class="btn boton-centro bordes  fs-1 ">
               <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
             </label>
             <input class="d-none"name="Archivo" id="archivoo" type="file"  multiple >
@@ -228,8 +235,8 @@
           </div>
               <div class="col-md-8">
                 <div class="card-body text-center">
-                  <h5 class="card-title text-center fs-4"><input type="text" name="Nombre" placeholder="Nombre de tu juego"></h5>
-                  <p class="card-text fs-5"><input type="text" name="Descripcion" placeholder="Descripcion"></p>
+                  <h5 class="card-title text-center fs-4"><input type="text" class="transp colorInput" name="Nombre" placeholder="Nombre de tu juego"></h5>
+                  <p class="card-text fs-5"><input type="text" class="transp colorInput" name="Descripcion" placeholder="Descripcion"></p>
                     
                      <div class="rating">
                     <input type="radio" name="rating-6" id="star1-6" value="1"/>
@@ -250,7 +257,6 @@
                 </div>
               </div>
             </div>
-          </div>
     </div>
 </div>
 </div>
@@ -271,11 +277,8 @@
   
 </div>
     
+</div>
 
-
-    
-
-    </div>
 
      
     
@@ -284,10 +287,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-<!-- <h1>Sistema de Opiniones</h1>
-    <div class="opinion-form">
-      <input type="text" id="name" placeholder="Tu nombre">
-      <textarea id="opinion" placeholder="Escribe tu opinión"></textarea>
-      <button onclick="agregarOpinion()">Agregar opinión</button>
-    </div>
-    <div class="opinion-list" id="opinionList"></div> -->
