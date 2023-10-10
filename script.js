@@ -4,20 +4,22 @@ const cards = document.getElementsByClassName("card");
 const iconos = document.getElementsByClassName("fa-brands")
 const colorBlanco = document.querySelector(".colorBlanco")
 const buscador = document.querySelector("#buscador")
+const BtnDark = document.getElementsByClassName("btn-darkk")
+const col = document.getElementsByClassName("col")
+const html = document.querySelector("html");
 
-sliderBtn.addEventListener('click', () => {
- sliderBtn.classList.toggle('active');
-  container.classList.toggle('darkk-mode');
-  colorBlanco.classList.toggle("text-white")
+sliderBtn.addEventListener("click", () => {
+    sliderBtn.classList.toggle('active');
+    html.dataset.bsTheme = html.dataset.bsTheme === "dark" ? "light" : "dark";
+    for(const boton of BtnDark){
+        boton.classList.toggle("btn-outline-dark")
+    boton.classList.toggle("btn-outline-light")
+    for (const card of cards) {
+        card.classList.toggle('dark-mode');
+      }
+    }
+  });
 
-  for (const card of cards) {
-    card.classList.toggle('dark-mode');
-  }
-
-  for (const icono of iconos) {
-    icono.classList.toggle("text-white")
-  }
-});
 
 
 
@@ -32,23 +34,24 @@ function filtrar(substring, elements){
     return cumplen
 }
 //eventos
+let order = 1;
 
-buscador.addEventListener("input", ()=>{
-    if (buscador.value == ""){
-        for (i of cards){
-            i.classList.remove("d-none")
+buscador.addEventListener("input", () => {
+    if (buscador.value == "") {
+        for (const i of col) {
+            i.classList.remove("d-none");
         }
-    }else{
-        filtrados = filtrar(buscador.value, cards)
-        for (i of cards){
-            i.classList.add("d-none")
+    } else {
+        const filtrados = filtrar(buscador.value, col);
+        for (const i of col) {
+            i.classList.add("d-none");
         }
-        for (i of filtrados){
-            i.classList.remove("d-none")
+        for (const i of filtrados) {
+            i.classList.remove("d-none");
+            i.classList.add(`order-${order}`);
+            order++;
+
+            }
         }
     }
-    
-})
-
-
-// ejecuciones
+);
