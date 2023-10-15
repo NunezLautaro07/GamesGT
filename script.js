@@ -21,15 +21,15 @@ sliderBtn.addEventListener("click", () => {
         card.classList.toggle('dark-mode');
     }
 });
-
+iteracion = 0
 class Card {
-    constructor(archivo,foto,nombre,descripcion,id) {
+    constructor(archivo,foto,nombre,descripcion,) {
         this.archivo = archivo
         this.foto = foto;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.divElement = null;
-        this.id = id;
+        this.id = iteracion++;
         this.#crear();
     }
 
@@ -46,12 +46,16 @@ class Card {
                         <h5 class="card-title text-center fs-4">${this.nombre}</h5>
                         <p class="card-text fs-5">${this.descripcion}</p>
                         <div class="rating">
-                            
-                            <label for="star1-${this.id}"><input type="radio" name="rating-${this.id}" id="star1-${this.id}" value="1" /></label>
-                            <label for="star2-${this.id}"><input type="radio" name="rating-${this.id}" id="star2-${this.id}" value="2" /></label>
-                            <label for="star3-${this.id}"><input type="radio" name="rating-${this.id}" id="star3-${this.id}" value="3" /></label>
-                            <label for="star4-${this.id}"><input type="radio" name="rating-${this.id}" id="star4-${this.id}" value="4" /></label>
-                            <label for="star5-${this.id}"><input type="radio" name="rating-${this.id}" id="star5-${this.id}" value="5" /></label>
+                        <input type="radio" name="rating-${this.id}" id="star1-${this.id}" value="1" />
+                            <label for="star1-${this.id}"></label>
+                            <input type="radio" name="rating-${this.id}" id="star2-${this.id}" value="2" />
+                            <label for="star2-${this.id}"></label>
+                            <input type="radio" name="rating-${this.id}" id="star3-${this.id}" value="3" />
+                            <label for="star3-${this.id}"></label>
+                            <input type="radio" name="rating-${this.id}" id="star4-${this.id}" value="4" />
+                            <label for="star4-${this.id}"></label>
+                            <input type="radio" name="rating-${this.id}" id="star5-${this.id}" value="5" />
+                            <label for="star5-${this.id}"></label>
 
                         </div>
                         <br>
@@ -84,15 +88,15 @@ class Card {
 }
 
 const nombres_productos = [
-    [`<a href="./juego1/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card1", "Racing GT", "¡Acelera y esquiva todos los autos que puedas hasta llegar a la meta!",1,1],
-    [`<a href="./juego2/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card2", "Tetris GT", "Haz caer las piezas y rellena los huecos para hacerlas desaparecer... ¡Ten cuidado de no quedarte sin espacio!",2],
-    [`<a href="./juego3/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card3", "Titulo del juego", "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",3],
-    [`<a href="./juego4/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card4", "Titulo del juego", "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",4],
-    [`<a href="./juego5/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card5", "Ta-Te-Ti", "Un emocionante duelo mental en un tablero 3x3. ¿Serás el estratega que marque tres en raya primero? ¡Desafía a tus amigos y demuestra tu destreza en este juego clásico de decisiones rápidas!",5],
+    [`<a href="./juego1/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card1", "Racing GT", "¡Acelera y esquiva todos los autos que puedas hasta llegar a la meta!"],
+    [`<a href="./juego2/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card2", "Tetris GT", "Haz caer las piezas y rellena los huecos para hacerlas desaparecer... ¡Ten cuidado de no quedarte sin espacio!"],
+    [`<a href="./juego3/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card3", "Titulo del juego", "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer"],
+    [`<a href="./juego4/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card4", "Titulo del juego", "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer"],
+    [`<a href="./juego5/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card5", "Ta-Te-Ti", "Un emocionante duelo mental en un tablero 3x3. ¿Serás el estratega que marque tres en raya primero? ¡Desafía a tus amigos y demuestra tu destreza en este juego clásico de decisiones rápidas!"],
     [`<label for="archivoo" class="btn boton-centro bordes  fs-1 ">
     <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
   </label>
-  <input class="d-none "name="Archivo" id="archivoo" type="file"  multiple  >`,"foto-card88",`<input type="text" class="transp colorInput" name="Nombre" placeholder="Nombre de tu juego"></h5>`,`<input type="text" class="transp colorInput" name="Descripcion" placeholder="Descripcion">`,6],
+  <input class="d-none "name="Archivo" id="archivoo" type="file"  multiple  >`,"foto-card88",`<input type="text" class="transp colorInput" name="Nombre" placeholder="Nombre de tu juego"></h5>`,`<input type="text" class="transp colorInput" name="Descripcion" placeholder="Descripcion">`],
 ];
 
 let busqueda = buscador.value;
