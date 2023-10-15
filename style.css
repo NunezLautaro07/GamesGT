@@ -34,11 +34,12 @@
   min-height: 250px;
   
 }
-.foto-card1{background-image: url(./fotos/39229f01-33cb-49b5-b491-c49692be7412.jpeg);
+
+.foto-card1{background-image: url(./fotos/dee2e630-dc78-442c-9e8a-712e19390ff3.jpeg);
 }
-.foto-card2{background-image: url(./fotos/dee2e630-dc78-442c-9e8a-712e19390ff3.jpeg);
+.foto-card2{background-image: url(./fotos/WhatsApp\ Image\ 2023-09-19\ at\ 11.44.22\ PM.jpeg);
 }
-.foto-card3{background-image: url(./fotos/WhatsApp\ Image\ 2023-09-19\ at\ 11.44.22\ PM.jpeg);
+.foto-card3{background-image: url(./fotos/39229f01-33cb-49b5-b491-c49692be7412.jpeg);
 }
 .foto-card4{background-image: url(./fotos/Captura\ de\ pantalla\ 2023-09-24\ 183524.png);}
 .foto-card5{background-image: url(./fotos/tateti.png);}
@@ -95,7 +96,6 @@ background-color: rgba(255, 255, 255, 0);}
 .foto-card{justify-content: center;}
 .boton-centro{padding: 39%;} 
 
-     
 
 
 
