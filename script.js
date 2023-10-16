@@ -10,6 +10,9 @@ const html = document.querySelector("html");
 const archivo = document.querySelector("#archivoo")
 const row = document.querySelector(".row1");
 
+
+
+
 sliderBtn.addEventListener("click", () => {
     sliderBtn.classList.toggle('active');
     html.dataset.bsTheme = html.dataset.bsTheme === "dark" ? "light" : "dark";
@@ -23,11 +26,12 @@ sliderBtn.addEventListener("click", () => {
 });
 iteracion = 0
 class Card {
-    constructor(archivo,foto,nombre,descripcion,) {
+    constructor(archivo,foto,nombre,descripcion,creador = null) {
         this.archivo = archivo
         this.foto = foto;
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.creador = creador;
         this.divElement = null;
         this.id = iteracion++;
         this.#crear();
@@ -45,6 +49,7 @@ class Card {
                     <div class="card-body text-center">
                         <h5 class="card-title text-center fs-4">${this.nombre}</h5>
                         <p class="card-text fs-5">${this.descripcion}</p>
+                        
                         <div class="rating">
                         <input type="radio" name="rating-${this.id}" id="star1-${this.id}" value="1" />
                             <label for="star1-${this.id}"></label>
@@ -59,11 +64,17 @@ class Card {
 
                         </div>
                         <br>
-                        <input type="submit" class="btn btn-outline-dark btn-darkk" value="Enviar">
+                        <input type="submit" class="btn btn-outline-dark btn-darkk mb-3" value="Enviar">
+                        <br>
+                        ${this.creador}
                     </div>
+                    
                 </div>
+                
             </div>
+            
         </div>
+        
     </form>
 `;
 
@@ -88,15 +99,32 @@ class Card {
 }
 
 const nombres_productos = [
-    [`<a href="./juego1/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card1", "Racing GT", "¡Acelera y esquiva todos los autos que puedas hasta llegar a la meta!"],
-    [`<a href="./juego2/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card2", "Tetris GT", "Haz caer las piezas y rellena los huecos para hacerlas desaparecer... ¡Ten cuidado de no quedarte sin espacio!"],
-    [`<a href="./juego3/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card3", "Titulo del juego", "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer"],
-    [`<a href="./juego4/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card4", "Titulo del juego", "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer"],
-    [`<a href="./juego5/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card5", "Ta-Te-Ti", "Un emocionante duelo mental en un tablero 3x3. ¿Serás el estratega que marque tres en raya primero? ¡Desafía a tus amigos y demuestra tu destreza en este juego clásico de decisiones rápidas!"],
-    [`<label for="archivoo" class="btn boton-centro bordes  fs-1 ">
-    <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
-  </label>
-  <input class="d-none "name="Archivo" id="archivoo" type="file"  multiple  >`,"foto-card88",`<input type="text" class="transp colorInput" name="Nombre" placeholder="Nombre de tu juego"></h5>`,`<input type="text" class="transp colorInput" name="Descripcion" placeholder="Descripcion">`],
+    [`<a href="./juego1/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card1", "Racing GT", "¡Acelera y esquiva todos los autos que puedas hasta llegar a la meta!",`<div class=" text-muted mb-0">
+    Martina Urdangaray
+  </div>`],
+    [`<a href="./juego2/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card2", "Tetris HP", "Haz caer las piezas y rellena los huecos para hacerlas desaparecer... ¡Ten cuidado de no quedarte sin espacio!",`<div class=" text-muted mb-0">
+    Martina Urdangaray
+  </div>`],
+    [`<a href="./juego3/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card3", "Viborita", " Controla a una serpiente hambrienta, crece recogiendo manzanas, esquiva paredes y tu propio cuerpo. ¿Hasta dónde llegarás sin perder? ¡Sé el maestro de la viborita",`<div class=" text-muted mb-0">
+    Francisco Zubaran
+  </div>`],
+//     [`<a href="./juego4/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card4", "Titulo del juego", "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",`<div class=" text-muted mb-0">
+//     Francisco Zubaran
+//   </div>`],
+    [`<a href="./juego5/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card5", "Ta-Te-Ti", "Forma una línea de tres símbolos iguales (X u O) en un tablero 3x3.",`<div class=" text-muted mb-0">
+    Marco Becerro
+  </div>`],
+    [`<a href="./juego6/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card6", "Tetris GT", "¡Avalancha de diversión en Tetris! Encaja bloques que caen, completa filas sin espacios. ¡Demuestra tu destreza mental y sé el maestro del Tetris!",`<div class=" text-muted mb-0">
+    Francisco Zubaran
+  </div>`],
+  [`<a href="./juego7/index.html" class="btn boton-centro bordes fs-1"><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></i></a>`,"foto-card7", "Adivina adivinador", "Adivina el Numero en el que estoy pensando en los menos intentos posibles!",`<div class=" text-muted mb-0">
+  GianFranco Caporaletti
+</div>`],
+  [`<label for="archivoo" class="btn boton-centro bordes  fs-1 ">
+  <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
+</label>
+<input class="d-none "name="Archivo" id="archivoo" type="file"  multiple  >`,"foto-card88",`<input type="text" class="transp colorInput" name="Nombre" placeholder="Envia tu juego"></h5>`,`<input type="text" class="transp colorInput" name="Descripcion" placeholder="Descripcion de tu juego">`, "  "],
+
 ];
 
 let busqueda = buscador.value;
@@ -139,6 +167,6 @@ buscador.addEventListener("input", () => {
 const productos = [];
 
 for (const p of nombres_productos) {
-    const n_prod = new Card(p[0], p[1], p[2], p[3]);
+    const n_prod = new Card(p[0], p[1], p[2], p[3], p[4]);
     productos.push(n_prod);
 }

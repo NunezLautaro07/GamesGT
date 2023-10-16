@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adivina el Numero Correcto</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Fondo animado */
+        #animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ffcc00, #ff3300, #ff00cc, #3300ff, #00ccff);
+            background-size: 500% 500%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Contenedor del juego */
+        #container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        #guessInput {
+            padding: 10px;
+        }
+
+        #guessSubmit {
+            padding: 10px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 20px #ff00de , 0 0 50px #ff00de , 0 0 40px #ff00de , 0 0 60px #ff00de ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+        }
+
+        /* Efecto de celebración */
+        #celebration {
+            display: none;
+            color: white;
+            font-size: 24px;
+            text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 20px #ff00de , 0 0 50px #ff00de , 0 0 40px #ff00de , 0 0 60px #ff00de ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Fondo animado -->
+    <div id="animated-background"></div>
+    
+    <!-- Contenedor del juego -->
+    <div id="container">
+        <h1>Adivinanza</h1>
+        <p>Estoy pensando en un número del 1 al 100. ¿Puedes adivinar cuál es?</p>
+        <input type="number" id="guessInput">
+        <input type="submit" value="Adivinar" id="guessSubmit">
+        <p id="result"></p>
+        <button id="resetButton" style="display: none;">Reiniciar Juego</button>
+        <div id="celebration">¡Felicitaciones! Has adivinado el número correcto.</div>
+    </div>
+
+    <script>
+        let randomNumber;
+        let attempts = 0;
+
+        function startNewGame() {
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+            attempts = 0;
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("guessInput").value = "";
+            document.getElementById("guessInput").disabled = false;
+            document.getElementById("guessSubmit").disabled = false;
+            document.getElementById("resetButton").style.display = "none";
+            document.getElementById("celebration").style.display = "none";
+        }
+
+        window.onload = startNewGame;
+
+        document.getElementById("guessSubmit").addEventListener("click", function() {
+            const guess = parseInt(document.getElementById("guessInput").value);
+            attempts++;
+
+            if (guess === randomNumber) {
+                document.getElementById("result").innerHTML = `¡Correcto! ¡Adivinaste en ${attempts} intentos!`;
+                document.getElementById("result").style.color = "green";
+                document.getElementById("guessInput").disabled = true;
+                document.getElementById("guessSubmit").disabled = true;
+                document.getElementById("resetButton").style.display = "block";
+                document.getElementById("celebration").style.display = "block";
+            } else if (guess < randomNumber) {
+                document.getElementById("result").innerHTML = "Demasiado bajo. Intenta de nuevo.";
+                document.getElementById("result").style.color = "red";
+            } else {
+                document.getElementById("result").innerHTML = "Demasiado alto. Intenta de nuevo.";
+                document.getElementById("result").style.color = "red";
+            }
+        });
+
+        document.getElementById("guessInput").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                document.getElementById("guessSubmit").click();
+            }
+        });
+
+        // Botón de reinicio
+        document.getElementById("resetButton").addEventListener("click", startNewGame);
+    </script>
+</body>
+</html>

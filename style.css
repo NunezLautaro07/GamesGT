@@ -42,7 +42,9 @@
 .foto-card3{background-image: url(./fotos/39229f01-33cb-49b5-b491-c49692be7412.jpeg);
 }
 .foto-card4{background-image: url(./fotos/Captura\ de\ pantalla\ 2023-09-24\ 183524.png);}
-.foto-card5{background-image: url(./fotos/tateti.png);}
+.foto-card5{background-image: url(./fotos/logo-tateti.jfif);}
+.foto-card6{background-image: url(./fotos/tetrisgt.png);}
+.foto-card7{background-image: url(./fotos/adivina.jfif);}
 .foto-card88{background-image: url(./fotos/image-removebg-preview.png);}
 .rating {
     display: inline-block;
@@ -95,6 +97,14 @@ margin-left: 10%;}
 background-color: rgba(255, 255, 255, 0);}
 .foto-card{justify-content: center;}
 .boton-centro{padding: 39%;} 
+.footer-push {
+  height: 60px; /* Ajusta según el tamaño de tu footer */
+}
+footer {
+  text-align: center;
+  padding: 10px;
+}
+
 
 
 
